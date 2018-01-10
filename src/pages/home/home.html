@@ -4,11 +4,15 @@
       Ionic Blank
     </ion-title>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="componentChoice">
+      <ion-segment-button value="one">Component one</ion-segment-button>
+      <ion-segment-button value="two">Component two</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <component-one *ngIf="componentChoice == 'one'"></component-one>
+  <componen-two *ngIf="componentChoice == 'two'"></componen-two>
 </ion-content>

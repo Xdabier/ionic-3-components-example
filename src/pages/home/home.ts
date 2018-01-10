@@ -7,8 +7,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  componentChoice;
+
   constructor(public navCtrl: NavController) {
 
+  }
+
+  ionViewWillLoad(){
+    this.componentChoice = "one"
   }
 
 }
